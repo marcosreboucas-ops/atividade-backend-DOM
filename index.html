@@ -1,0 +1,144 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo HTML, CSS e DOM</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main id="conteudo">
+        <!-- O JavaScript criará os elementos aqui -->
+    </main>
+
+    <footer id="rodape">
+        <p>Ranking das salas:</p>
+
+        <div class="bloco-footer" id="bloco1">
+            <p>Itália</p>
+        </div>
+
+        <div class="bloco-footer" id="bloco2">
+            <p>Angola</p>
+        </div>
+
+        <div class="bloco-footer" id="bloco3">
+            <p>Síria</p>
+        </div>
+    </footer>
+
+    <script>
+        // Selecionar o main
+        const main = document.getElementById("conteudo");
+
+        // MODIFICAR O CSS PELO JAVASCRIPT
+        document.body.style.backgroundColor = "#F4F5F7";
+        document.body.style.fontFamily = "Arial";
+        main.style.backgroundColor = "#FFFFFF";
+        main.style.textAlign = "center";
+        main.style.padding = "20px";
+
+        // CENTRALIZAR ELEMENTOS
+        document.querySelector("header").style.textAlign = "center";
+        document.querySelector("nav").style.textAlign = "center";
+        document.getElementById("rodape").style.textAlign = "center";
+
+        // CRIAR UM TÍTULO
+        const titulo = document.createElement("h1");
+        titulo.textContent = "Classificação das salas - Feira das Nações";
+        main.appendChild(titulo);
+
+        // CRIAR UM PARÁGRAFO
+        const paragrafo = document.createElement("p");
+        paragrafo.textContent = "Classificação das salas temáticas da Feira das Nações.";
+        main.appendChild(paragrafo);
+
+        // CRIAR PARÁGRAFO 2
+        const paragrafo2 = document.createElement("p");
+        paragrafo2.textContent = "As salas apresentadas foram as seguintes:";
+        main.appendChild(paragrafo2);
+
+        // CRIAR UMA IMAGEM
+        const imagem = document.createElement("img");
+        imagem.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/960px-World_map_-_low_resolution.svg.png";
+        imagem.alt = "Mapa do mundo";
+        imagem.width = 300;
+        main.appendChild(imagem);
+
+        // CRIAR UMA LISTA ORDENADA
+        const lista = document.createElement("ol");
+
+        const item1 = document.createElement("li");
+        item1.textContent = "Alemanha";
+        lista.appendChild(item1);
+
+        const item2 = document.createElement("li");
+        item2.textContent = "Angola";
+        lista.appendChild(item2);
+
+        const item3 = document.createElement("li");
+        item3.textContent = "Brasil";
+        lista.appendChild(item3);
+
+        const item4 = document.createElement("li");
+        item4.textContent = "Espanha";
+        lista.appendChild(item4);
+
+        const item5 = document.createElement("li");
+        item5.textContent = "Estados Unidos";
+        lista.appendChild(item5);
+
+        const item6 = document.createElement("li");
+        item6.textContent = "Itália";
+        lista.appendChild(item6);
+
+        const item7 = document.createElement("li");
+        item7.textContent = "Japão";
+        lista.appendChild(item7);
+
+        const item8 = document.createElement("li");
+        item8.textContent = "Líbano";
+        lista.appendChild(item8);
+
+        const item9 = document.createElement("li");
+        item9.textContent = "Síria";
+        lista.appendChild(item9);
+
+        main.appendChild(lista);
+
+        // CENTRALIZAR A LISTA
+        lista.style.display = "inline-block";
+        lista.style.textAlign = "left";
+
+        // CRIAR PARÁGRAFO 3
+        const paragrafo3 = document.createElement("p");
+        paragrafo3.textContent = "A classificação das salas ficou da seguinte forma:";
+        main.appendChild(paragrafo3);
+
+        // MODIFICAR AS CORES DO RODAPÉ
+        document.getElementById("rodape").style.backgroundColor = "#142B49";
+        document.getElementById("rodape").style.color = "white";
+        document.getElementById("rodape").style.padding = "20px";
+
+        // MODIFICAR AS CORES DO CABEÇALHO
+        document.querySelector("header").style.backgroundColor = "#142B49";
+        document.querySelector("header").style.color = "white";
+        document.querySelector("header").style.padding = "20px";
+
+    </script>
+
+</body>
+</html>
+```
